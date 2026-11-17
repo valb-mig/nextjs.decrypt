@@ -1,0 +1,122 @@
+:root {
+  --bg-0: #03040c;
+  --bg-1: #050714;
+  --bg-2: #101629;
+  --bg-3: #212c40;
+  --bg-4: #34435e;
+  --fg-1: #46525f;
+  --fg-2: #798a95;
+  --fg-3: #b4c2cc;
+  --fg-4: #eef3f6;
+  --green-1: #5ef38c;
+  --green-2: #459c69;
+  --green-3: #3b755f;
+  --amber: #f3c55e;
+  --red: #f3707a;
+  --u: 3px;
+  color-scheme: dark;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background: var(--bg-1);
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  min-height: 100dvh;
+  background-color: var(--bg-1);
+  background-image: radial-gradient(var(--bg-2) 1.2px, transparent 1.4px);
+  background-size: 18px 18px;
+  color: var(--fg-4);
+  font-family: var(--font-ui), system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+  -webkit-font-smoothing: none;
+  overflow-x: hidden;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 50;
+  background: repeating-linear-gradient(to bottom, transparent 0 2px, rgb(0 0 0 / 0.1) 2px 3px);
+}
+
+::selection {
+  background: var(--green-1);
+  color: var(--bg-0);
+}
+
+a {
+  color: var(--green-1);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--green-1);
+  outline-offset: 2px;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+.px {
+  box-shadow:
+    0 calc(var(--u) * -1) 0 0 var(--edge, var(--bg-3)),
+    0 var(--u) 0 0 var(--edge, var(--bg-3)),
+    calc(var(--u) * -1) 0 0 0 var(--edge, var(--bg-3)),
+    var(--u) 0 0 0 var(--edge, var(--bg-3)),
+    inset 0 var(--u) 0 0 var(--hi, transparent),
+    inset 0 calc(var(--u) * -1) 0 0 var(--lo, transparent);
+}
+
+.sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--bg-3);
+  border: 3px solid var(--bg-1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

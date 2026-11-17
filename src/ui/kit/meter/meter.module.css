@@ -1,0 +1,36 @@
+.meter {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--fg-2);
+  font-size: 14px;
+}
+
+.cells {
+  display: inline-flex;
+  gap: 2px;
+}
+
+.cell {
+  width: 6px;
+  height: 12px;
+  background: var(--bg-3);
+}
+
+.high .lit {
+  background: var(--green-1);
+}
+
+.mid .lit {
+  background: var(--amber);
+}
+
+.low .lit {
+  background: var(--red);
+}
+
+.value {
+  min-width: 3.2ch;
+  text-align: right;
+  color: var(--fg-3);
+}

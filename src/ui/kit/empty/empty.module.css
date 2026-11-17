@@ -1,0 +1,24 @@
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 36px 16px;
+  text-align: center;
+  color: var(--fg-2);
+}
+
+.empty svg {
+  color: var(--bg-4);
+}
+
+.title {
+  color: var(--fg-3);
+  font-size: 18px;
+}
+
+.text {
+  max-width: 46ch;
+  font-size: 14px;
+  line-height: 1.5;
+}

@@ -1,0 +1,26 @@
+.tag {
+  --edge: var(--bg-3);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 8px;
+  background: var(--bg-1);
+  color: var(--fg-3);
+  font-size: 13px;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.go {
+  --edge: var(--green-3);
+  color: var(--green-1);
+}
+
+.warn {
+  --edge: #6b5a2c;
+  color: var(--amber);
+}
+
+.args {
+  color: var(--fg-2);
+}

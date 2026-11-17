@@ -1,0 +1,58 @@
+.box {
+  --edge: var(--bg-3);
+  --hi: transparent;
+  --lo: transparent;
+  position: relative;
+  background: var(--bg-2);
+}
+
+.raised {
+  --hi: var(--bg-3);
+  --lo: var(--bg-1);
+}
+
+.sunk {
+  background: var(--bg-1);
+  --edge: var(--bg-3);
+  --hi: var(--bg-0);
+}
+
+.flat {
+  --edge: var(--bg-2);
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 20px;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 32px;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  color: var(--fg-4);
+  text-shadow: 2px 2px 0 var(--bg-0);
+}
+
+.title svg {
+  color: var(--green-1);
+}
+
+.tools {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
