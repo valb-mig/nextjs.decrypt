@@ -1,23 +1,28 @@
 {
   "name": "decrypt",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.12"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "check": "tsc --noEmit",
+    "test": "vitest run"
   },
   "dependencies": {
-    "next": "14.0.1",
-    "react": "^18",
-    "react-dom": "^18",
-    "react-icons": "^4.11.0"
+    "next": "16.4.6",
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
   },
   "devDependencies": {
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "typescript": "^5"
+    "@types/node": "^26",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "typescript": "^6",
+    "vitest": "^5"
   }
 }

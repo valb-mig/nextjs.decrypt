@@ -1,0 +1,97 @@
+.btn {
+  --edge: var(--bg-0);
+  --hi: var(--bg-4);
+  --lo: var(--bg-1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 0;
+  background: var(--bg-3);
+  color: var(--fg-4);
+  font: inherit;
+  line-height: 1;
+  text-shadow: 2px 2px 0 rgb(0 0 0 / 0.35);
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+  transition: transform 60ms steps(1), filter 60ms steps(1);
+}
+
+.md {
+  min-height: 40px;
+  padding: 0 16px;
+  font-size: 16px;
+}
+
+.sm {
+  min-height: 30px;
+  padding: 0 10px;
+  font-size: 14px;
+  gap: 6px;
+}
+
+.btn:hover:not(:disabled) {
+  filter: brightness(1.15);
+}
+
+.btn:active:not(:disabled) {
+  transform: translateY(2px);
+  --hi: transparent;
+}
+
+.btn:focus-visible {
+  outline: none;
+  --edge: var(--green-1);
+}
+
+.btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
+.go {
+  background: var(--green-1);
+  color: var(--bg-0);
+  text-shadow: none;
+  --edge: var(--green-3);
+  --hi: #a8ffc4;
+  --lo: var(--green-2);
+}
+
+.go:focus-visible {
+  --edge: var(--fg-4);
+}
+
+.ghost {
+  background: transparent;
+  color: var(--fg-3);
+  --edge: var(--bg-3);
+  --hi: transparent;
+  --lo: transparent;
+}
+
+.ghost:hover:not(:disabled) {
+  background: var(--bg-3);
+  color: var(--fg-4);
+  filter: none;
+}
+
+.chip {
+  background: var(--bg-1);
+  color: var(--fg-2);
+  --edge: var(--bg-3);
+  --hi: transparent;
+  --lo: transparent;
+}
+
+.chip:hover:not(:disabled) {
+  color: var(--fg-4);
+  filter: none;
+}
+
+.on {
+  background: var(--green-3);
+  color: var(--fg-4);
+  --edge: var(--green-1);
+}

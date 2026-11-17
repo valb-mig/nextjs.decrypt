@@ -1,0 +1,94 @@
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 0;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 30px;
+  flex-wrap: wrap;
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--fg-3);
+  font-size: 15px;
+}
+
+.label svg {
+  color: var(--green-1);
+}
+
+.tools {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.hint {
+  color: var(--fg-2);
+  font-size: 13px;
+}
+
+.input {
+  --edge: var(--bg-3);
+  --hi: var(--bg-0);
+  width: 100%;
+  border: 0;
+  background: var(--bg-1);
+  color: var(--fg-4);
+  font-family: var(--font-mono);
+  font-size: 22px;
+  line-height: 1.15;
+  padding: 10px 12px;
+  caret-color: var(--green-1);
+}
+
+.input::placeholder {
+  color: var(--fg-1);
+}
+
+.input:focus {
+  outline: none;
+  --edge: var(--green-2);
+}
+
+.input[readonly] {
+  background: var(--bg-0);
+}
+
+.area {
+  resize: vertical;
+  min-height: 132px;
+  overflow-wrap: anywhere;
+}
+
+.line {
+  min-height: 44px;
+}
+
+.step {
+  display: inline-flex;
+  align-items: stretch;
+  gap: 8px;
+}
+
+.num {
+  width: 72px;
+  text-align: center;
+  padding: 0 6px;
+  appearance: textfield;
+}
+
+.num::-webkit-inner-spin-button,
+.num::-webkit-outer-spin-button {
+  appearance: none;
+}
